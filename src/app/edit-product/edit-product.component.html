@@ -1,0 +1,44 @@
+<div>
+    <button routerLink="/list" routerLinkActive="active">Product List</button>
+</div>
+<div>
+    <button routerLink="/add" routerLinkActive="active">Add Product</button>
+</div>
+
+<p>Update Product</p>
+<form [formGroup]="form" (ngSubmit)="submitUpdateForm()">
+    <div>
+
+        <input type="number" formControlName="id" placeholder="Идентификатор"><br>
+    </div>
+    <div>
+
+        <input type="text" formControlName="productName" placeholder="Название"><br>
+    </div>
+    <div>
+
+        <input type="text" formControlName="productDescription" placeholder="Описание"><br>
+    </div>
+    <div>
+
+        <input type="number" formControlName="productWeight" placeholder="Вес продукта"><br>
+    </div>
+    <div>
+
+        <input type="number" formControlName="price" placeholder="Цена"><br>
+    </div>
+
+
+    <div>
+        <img [src]='apiUrl + product?.imagePath' style="height: 50px; width: 50px;">
+    </div>
+
+
+
+    <div>
+        <input type="file" id="uploadImageProduct" (change)="uploadFile($event)">
+    </div>
+    <div>
+        <button type="submit">Save Product</button>
+    </div>
+</form>

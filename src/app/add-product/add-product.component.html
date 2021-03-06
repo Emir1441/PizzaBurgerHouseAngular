@@ -1,0 +1,31 @@
+<div>
+    <button routerLink="/list" routerLinkActive="active">Product List</button>
+</div>
+
+<p>Add Product</p>
+<form [formGroup]="addForm" (ngSubmit)="submitAddForm()">
+    <div>
+        <input type="text" formControlName="productName" placeholder="Название"><br>
+    </div>
+    <div>
+
+        <input type="text" size="60" formControlName="productDescription" placeholder="Описание"><br>
+
+    </div>
+    <div>
+        <input type="text" formControlName="productWeight" placeholder="Вес продукта"><br>
+    </div>
+    <div>
+        <input type="text" formControlName="price" placeholder="Цена"><br>
+    </div>
+
+
+
+
+    <div>
+        <input type="file" (change)="uploadFile($event)"><br>
+    </div>
+    <div>
+        <button type="submit">Add Product</button>
+    </div>
+</form>

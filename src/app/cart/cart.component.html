@@ -1,0 +1,63 @@
+<div class="navbar navbar-inverse bg-inverse">
+    <a class="navbar-brand">SPORTS STORE</a>
+</div>
+<div>
+    <h2>Your Cart</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Quantity</th>
+                <th>Product</th>
+                <th>Price</th>
+                <th>Subtotal</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- <tr *ngIf="cart.cartProducts.length == 0"> -->
+            <tr>
+                <td>
+                    Your cart is empty
+                </td>
+            </tr>
+            <tr *ngFor="let x of cartService.cartProducts ">
+                <td>
+                    <input type="number" min="1" style="width:5em" [value]="x.quantity" (change)="cartService.updateQuantity(x.product,
+    $event.target.value)" />
+                </td>
+                <td>{{x.product.productName }}</td>
+                <td>
+                    {{x.product.price}}
+                </td>
+                <td>
+                    {{(x.lineTotal) }}
+                </td>
+                <td>
+                    <button (click)="cartService.removeLine(x.product.id)">
+                        Remove
+                    </button>
+                </td>
+                <td>
+
+                </td>
+                <!-- <button (click)="go(x)">
+                    Send to Serve
+                </button> -->
+            </tr>
+
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>Total:</td>
+                <td>
+                    {{cartService.cartPrice}}
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+</div>
+<div>
+
+    <button [disabled]="cartService.cartProducts.length == 0" (click)="sendOrder(cartService.cartProducts)">
+        Checkout
+    </button>
+</div>

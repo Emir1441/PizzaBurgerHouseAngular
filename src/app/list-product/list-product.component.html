@@ -1,0 +1,34 @@
+<div>
+    <button routerLink="/add" routerLinkActive="active">Add Product</button>
+</div>
+
+
+
+
+<p>Product List</p>
+
+<table>
+    <thead>
+        <tr>
+            <td>ID</td>
+            <td>Name</td>
+            <td>Description</td>
+            <td>Weight</td>
+            <td>Price</td>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of products">
+            <td>{{product.id}}</td>
+            <td>{{product.productName}}</td>
+            <td>{{product.productDescription}}</td>
+            <td>{{product.productWeight}}</td>
+            <td>{{product.price}}</td>
+            <img [src]='apiUrl + product?.imagePath' style="height: 50px; width: 50px;">
+            <td><button [routerLink]="['/edit',product.id]">Edit</button></td>
+            <!-- <td><button (click)="removeProduct(product?.id)">Delete</button></td> -->
+            <td><button [routerLink]="['/cart']" (click)="addCart(product)">Add to cart</button></td>
+        </tr>
+    </tbody>
+</table>
