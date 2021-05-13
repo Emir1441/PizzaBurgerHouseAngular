@@ -1,0 +1,23 @@
+<form [formGroup]="addImage" (ngSubmit)="saveImage() ">
+
+    <h2 class="text-center">Загрузка изображения</h2>
+    <div class="text-center" *ngIf="responseIdImage > 0">
+        <div>
+            <hr>
+            <h2>Ваш ID картинки {{responseIdImage}}</h2>
+
+        </div>
+    </div>
+    <div>
+        <div class="text-center m-2">
+            <img [src]="imgURL" height="200" *ngIf="imgURL">
+        </div>
+
+
+        <input #file type="file" (change)="uploadFile(file.files)" class="form-control" id="customFile" />
+    </div>
+
+    <div class="my-3">
+        <button type="submit" class="btn btn-primary btn-block">Сохранить изображение</button>
+    </div>
+</form>

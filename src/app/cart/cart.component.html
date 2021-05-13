@@ -1,0 +1,78 @@
+<div class="width:100%">
+
+    <div class="bg-dark text-white p-2">
+        <div class="navbar-brand">Bizza Burger House</div>
+    </div>
+
+    <div class="m-1 ">
+        <h2 class="text-center">Ваш Заказ</h2>
+        <table class="table table-bordered table-striped p-1">
+            <thead>
+                <tr>
+                    <th>Наименнование</th>
+                    <!-- <th></th> -->
+                    <th>Количество</th>
+
+                    <th class="text-right">Цена</th>
+                    <th class="text-right">Сумма продукта</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngIf="cart.selections.length == 0">
+                    <td colspan="4" class="text-xs-center">
+                        Ваша корзина пуста
+                    </td>
+                </tr>
+                <tr *ngFor="let sel of cart.selections">
+                    <td>{{sel.productName}}</td>
+                    <!-- <td><img [src]='apiUrl + sel?.imagePath'></td> -->
+
+                    <!-- <td> <img [src]='apiUrl + sel?.imagePath'></td> -->
+
+
+
+                    <td>
+                        <input type="number" min="1" class="form-control-sm" style="width:5em"
+                            [(ngModel)]="sel.quantity" />
+                    </td>
+
+                    <td class="text-right"> {{sel.price }} руб </td>
+
+
+                    <td class="text-right"> {{(sel.quantity * sel.price)}} руб </td>
+
+
+                    <td> <button class="btn btn-sm btn-danger" (click)="cart.updateQuantity(sel.productId, 0)">Удалить
+                            продукт </button> </td>
+
+
+
+
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3" class="text-right">Итоговая сумма:</td>
+                    <td class="text-right">
+                        {{cart.totalPrice}} руб
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+
+</div>
+
+
+
+<div class="text-center">
+    <button class="btn btn-primary m-1" routerLink="/list">Продолжить заказ</button>
+    <button class="btn btn-secondary m-1" routerLink="/checkout/step1">
+        Заказать
+    </button>
+</div>
+
+
+
+
+<!-- [disabled]="cart.selections.length == 0" -->

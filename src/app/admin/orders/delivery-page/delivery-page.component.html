@@ -1,0 +1,68 @@
+<div class="table-responsive">
+    <table class="table">
+        <thead class="text-white bg-primary">
+            <tr>
+
+                <td>№</td>
+                <td>Имя</td>
+                <td>Телефон</td>
+                <td>Email</td>
+                <td>Время</td>
+
+
+
+
+                <td>Город</td>
+                <td>Улица</td>
+                <td>Дома</td>
+                <td>Квартира</td>
+
+
+
+
+                <td>Подъезд</td>
+
+
+                <td>Оплата</td>
+                <td>Сумма</td>
+                <td></td>
+
+
+
+
+
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let order of deliveryOrders">
+                <td>{{order.orderId}}</td>
+                <td>{{order.customerName}}</td>
+                <td>{{order.customerPhoneNumber}}</td>
+                <td>{{order.customerEmail}}</td>
+                <td>{{order.createOrder | date:'HH:mm dd.MM.yyyy'}}</td>
+
+
+                <td>{{order.deliveryOrder.customerCity}}</td>
+                <td>{{order.deliveryOrder.customerStreet}}</td>
+                <td>{{order.deliveryOrder.customerHouseNumber}}</td>
+                <td>{{order.deliveryOrder.customerApartmentNumber}}</td>
+                <td>{{order.deliveryOrder.customerEntranceNumber}}</td>
+
+
+
+                <td>{{order.paymentMethod.paymentType}}</td>
+                <td>{{order.paymentMethod.totalPrice}}</td>
+
+
+                <td><button class="btn btn-primary" [routerLink]="['/admin','view', order.orderId]">Просмотреть
+                    </button></td>
+
+
+
+
+            </tr>
+
+        </tbody>
+    </table>
+</div>

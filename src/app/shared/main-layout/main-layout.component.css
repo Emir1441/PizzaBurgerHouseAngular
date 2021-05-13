@@ -1,0 +1,325 @@
+.page {
+ 
+  position: relative;
+  font-family: 'Manrope', sans-serif;
+  box-sizing: border-box;
+} 
+
+
+/* Header */
+.header {
+  border: 1px solid red;
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;   
+}
+
+.header-logo {
+  border: 1px solid red;
+}
+
+
+.header-img {
+  width: 10%;
+}
+
+.header-nav {
+  border: 1px solid red;
+  font-size: 200%;
+}
+
+
+
+.header-link {
+  border: 1px solid red;
+  padding: 0 15px; 
+  border-radius: 5px;  
+  color: #0079ae;  
+}
+.header-link:hover,
+.header-link:focus
+
+{
+  background: whitesmoke;
+  text-decoration: none;
+  outline: whitesmoke;
+}
+
+
+
+ .carousel-img {
+  width: 100%;
+} 
+
+.container{
+  text-align: center;
+}
+
+.headerTest{
+  font-size: 25px;
+  line-height: 20px;
+}
+
+
+
+.headerBrand{
+  font-size: 1.5rem;
+}
+
+
+
+
+  .modal-body{
+  padding: 0;
+  border-radius: 15px;
+}
+
+
+.nav-link{
+  cursor: pointer;
+}
+
+.footer-line{
+ background-color: whitesmoke;
+ 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.tablink {
+
+  color: black;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 0px;
+  font-size: calc(8px + 11 * (100vw / 1280));
+  /* font-size: calc(5px + 11 * (100vw / 1280)); */
+  width: 16.6%;
+}
+
+.active{
+  background-color: #007bff;
+  border-radius: 10px;
+}
+
+
+
+
+
+.fasX{
+  color: red;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Main */
+.menu {
+  font-size: 21px;
+  border: 1px solid black;
+  margin-top: 5px;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between; 
+  background:#0079ae;
+  height: 100;
+  border-radius: 5px;
+  position: sticky;
+  top:0;
+  align-items: center;
+}
+
+
+
+
+
+
+.menu-list {
+  border: 1px solid rgb(209, 206, 22);
+  padding: 0 20px;
+  border-radius: 5px; 
+  color: white;  
+}
+
+.menu-list:hover,
+.menu-list:focus
+{
+  background: red;
+  color: white;
+  text-decoration: none;
+  outline: none;
+  
+  
+}
+
+
+
+/* Тут нужно досмотреть */
+.cart:hover{
+  background: red;
+  text-decoration: none;
+  color: white;
+}
+
+/* Footer*/
+.footer {
+  border: 1px solid red;
+  display: flex;
+  justify-content: space-between;
+  color: blue; 
+  align-items: center;
+  padding: 0 20px;  
+ 
+  
+}
+
+.footer-address {
+  border: 1px solid red;
+  padding-top: 15px;
+  display: flex;
+  
+  
+  
+
+  
+  
+}
+
+.contacts {
+  font-weight: 600;
+}
+
+
+.footer-contact {
+text-decoration: none;
+color: #0000FF;
+
+
+
+
+}
+
+.social {
+  border: 1px solid red;
+  font-size: 30px;
+  
+
+}
+
+.footer-social {  
+  border: 1px solid red;
+  
+  
+}
+
+.footer-social i{
+  color: #0088CC;
+  
+  
+}
+
+
+.footer-social:hover i {
+  color: #1532d4;
+  transform: scale(1.1);
+}
+
+
+
+
+
+
+
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+
+
+.li-ic{
+  font-size: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

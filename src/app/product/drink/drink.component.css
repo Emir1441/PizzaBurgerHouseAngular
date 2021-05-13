@@ -1,0 +1,38 @@
+.container {
+
+  text-align: center;
+}
+
+.product-block {
+  
+  display: inline-block;
+  margin: 20px;
+  padding: 5px;
+} 
+
+.product-block:hover {
+  transform: scale(1.1) ;
+  transition: transform 0.4s;
+}
+
+
+
+.product-img {
+ 
+  text-align: center; 
+}
+
+.product-title {
+  text-align: center;
+  line-height: 0;
+  
+}
+
+
+
+
+
+.btn-cart {
+  text-align: center;
+
+}

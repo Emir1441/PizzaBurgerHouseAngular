@@ -1,0 +1,41 @@
+<div class="table-responsive">
+    <table class="table ">
+        <thead class="text-white bg-primary">
+            <tr>
+                <td>Id</td>
+                <td>Наименнование</td>
+                <td>Тип товара</td>
+                <td>Описание</td>
+                <td>Вес</td>
+                <td>Цена</td>
+                <td>Изображение</td>
+                <td></td>
+                <td></td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let product of products">
+                <td>{{product.productId}}</td>
+                <td>{{product.productName}}</td>
+                <td>{{product.productType}}</td>
+                <td>{{product.productDescription}}</td>
+                <td>{{product.productWeight}} грамм</td>
+                <td>{{product.price }} руб</td>
+
+
+                <img [src]='apiUrl + product?.uploadImage.path' style="height: 100px; width: 100px;">
+
+
+                <td><button class="btn btn-primary" [routerLink]="['/admin','edit',product.productId]">Edit</button>
+                </td>
+
+
+
+                <td><button class="  btn btn-danger " (click)="removeProduct(product?.productId)">Delete</button>
+                </td>
+
+            </tr>
+
+        </tbody>
+    </table>
+</div>

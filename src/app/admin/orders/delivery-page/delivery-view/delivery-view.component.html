@@ -1,0 +1,28 @@
+<div class="table-responsive">
+    <table class="table ">
+        <thead class="text-white bg-primary">
+            <tr>
+                <td>№</td>
+                <td>Продукт</td>
+                <td>Кол-во</td>
+                <td>Цена</td>
+
+
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr *ngFor="let order of res">
+                <td>{{order.productId}}</td>
+                <td>{{order.productName}}</td>
+                <td>{{order.quantity}}</td>
+                <td>{{order.price}}</td>
+
+
+
+            </tr>
+
+
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,150 @@
+<div class="page">
+
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light" aria-label="Fourth navbar example">
+    <div class="container-fluid ">
+
+
+
+      <a class="navbar-brand  headerBrand" href="#">
+        Pizza Burger House
+      </a>
+
+      <button class="navbar-toggler btn btn-outline-primary" type="button" data-toggle="collapse"
+        data-target="#navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation"
+        (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed" aria-controls="navbarTogglerDemo02">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse headerTest " id="navbarsExample04" [ngbCollapse]="isCollapsed">
+
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+
+          <li class="nav-item">
+            <a class="nav-link   " aria-current="page" href="#">
+              <i class="fas fa-phone-alt"></i>7887
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+  </nav>
+
+  <ngb-carousel *ngIf="images">
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+        <img class="carousel-img" [src]="images[0]" alt="Random first slide">
+      </div>
+    </ng-template>
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+        <img class="carousel-img" [src]="images[1]" alt="Random second slide">
+      </div>
+    </ng-template>
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper">
+        <img class="carousel-img" [src]="images[2]" alt="Random third slide">
+      </div>
+    </ng-template>
+  </ngb-carousel>
+
+
+  <button class=" tablink " routerLinkActive="active" [routerLink]="['/pizza']">Пицца</button>
+  <button class="tablink" routerLinkActive="active" [routerLink]="['/burger']">Бургеры</button>
+  <button class="tablink" routerLinkActive="active" [routerLink]="['/potato']">Картофель</button>
+  <button class="tablink" routerLinkActive="active" [routerLink]="['/sauce']">Соусы</button>
+  <button class="tablink" routerLinkActive="active" [routerLink]="['/drink']">Напитки</button>
+
+
+
+  <button *ngIf="itemCount > 0; else empty" class="tablink " [routerLink]="['/cart']"><i
+      class="fas fasX fa-shopping-cart "></i> {{
+    totalPrice}} руб.({{ itemCount }})</button>
+
+
+
+  <ng-template #empty>
+    <button class="tablink"><i class="fas fasX fa-shopping-cart "></i></button>
+  </ng-template>
+
+
+
+  <div>
+    <router-outlet></router-outlet>
+  </div>
+  <div class="footer_map">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2349.049069744449!2d27.595362915260633!3d53.9308720801057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dbcf0df3b3ae31%3A0x615586a6c3ee51b9!2z0YPQuy4g0K_QutGD0LHQsCDQmtC-0LvQsNGB0LAgMywg0JzQuNC90YHQug!5e0!3m2!1sru!2sby!4v1617202206520!5m2!1sru!2sby"
+      width="100%" height="200px" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+  </div>
+
+
+  <footer class="page-footer font-small unique-color-dark">
+    <div class="footer-line">
+      <div class="container">
+
+
+        <div class="row py-4 d-flex align-items-center">
+          <div class="col-md-6 col-lg-7 text-center text-md-right ">
+            <!-- Facebook -->
+            <a class="fb-ic li-ic">
+              <i class="fab fa-facebook-f red-text mr-4 "> </i>
+            </a>
+            <!-- Twitter -->
+            <a class="tw-ic li-ic">
+              <i class="fab fa-twitter white-text mr-4"> </i>
+            </a>
+            <!-- Google +-->
+            <a class="gplus-ic li-ic ">
+              <i class="fab fa-google-plus-g white-text mr-4"> </i>
+            </a>
+            <!--Linkedin -->
+            <a class="li-ic">
+              <i class="fab fa-linkedin-in white-text mr-4"> </i>
+            </a>
+            <!--Instagram-->
+            <a class="ins-ic li-ic">
+              <i class="fab fa-instagram white-text"> </i>
+            </a>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+    <div class="container text-center text-md-left mt-5">
+      <div class="row mt-3">
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <h2 class="text-uppercase font-weight-bold">Pizza-Burger-House</h2>
+          <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+          <h3>Для любителей настоящей королевской еды! PIZZA-BURGER-HOUSE — сеть быстрого питания.</h3>
+        </div>
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <h2 class="text-uppercase font-weight-bold">Контакты</h2>
+          <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+
+
+          <p>
+            <i class="fas fa-home mr-3"></i> Беларусь, г. Минск ул. Минская, 3
+          </p>
+
+          <p>
+            <i class="fas fa-envelope mr-3"></i><a href="mailto:info@pizza-burger.by">info@pizza-burger.by</a>
+          </p>
+          <p>
+            <i class="fas fa-phone mr-3"></i> <a href="tel:7887">7887</a>
+          </p>
+          <p>
+            <i class="fas fa-mobile-alt mr-3"></i><a href="tel:+375330000000">+ 375(33) 000-00-00</a>
+          </p>
+          <p>
+            <i class="fas fa-mobile-alt mr-3"></i><a href="tel:+375440000000">+ 375(44) 000-00-00</a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright text-center py-3">© 2021 Все права защищены.</div>
+  </footer>
+</div> <!-- /.page -->

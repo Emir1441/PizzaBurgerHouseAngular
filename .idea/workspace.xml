@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="14a12890-fa0b-4609-9cd5-fe9014c3518d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/app/admin/admin.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/img/burger/five.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/img/burger/four.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/img/burger/one.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/img/burger/six.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/img/burger/three.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/img/burger/two.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/img/drink/FUZE_TEA.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/img/drink/bonaq.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/img/drink/fanta.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/img/drink/kola-zero.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/img/drink/kola.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/img/drink/rich.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/img/drink/sprite.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/img/drink/tea.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/img/pizza/5syrov.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/img/pizza/Aziya.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/img/pizza/carbonara.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/img/pizza/firmennaya.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/img/pizza/margarita.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/img/pizza/pepperoni.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/img/pizza/pepperoni_bluz.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/img/pizza/toskana.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/img/pizza/tsyplenok__dominator_small-min.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/img/pizza/vetchina_i_griby.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/img/potato/der.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/img/potato/free.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/img/souce/bar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/img/souce/ches.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/img/souce/gor.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/img/souce/kar.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/img/souce/ket.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/img/souce/kisslad.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/img/souce/sir.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/angular.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles.css" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1ewpFPswv58s5lTlo638TZgpEQ5" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/assets/img/drink" />
+    <property name="nodejs.protractor.protractor_package" value="$PROJECT_DIR$/node_modules/protractor" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="ts.external.directory.path" value="D:\Pizza-Burger-House\pizza-burger-house\node_modules\typescript\lib" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Pizza-Burger-House\pizza-burger-house\src\assets\img\drink" />
+      <recent name="D:\Pizza-Burger-House\pizza-burger-house\src\assets\img\potato" />
+      <recent name="D:\Pizza-Burger-House\pizza-burger-house\src\assets\img\souce" />
+      <recent name="D:\Pizza-Burger-House\pizza-burger-house\src\assets\img\pizza" />
+      <recent name="D:\Pizza-Burger-House\pizza-burger-house\src\assets\img\burger" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Pizza-Burger-House\pizza-burger-house\src\assets\img" />
+      <recent name="D:\Pizza-Burger-House\pizza-burger-house\src\assets\img\drink" />
+      <recent name="D:\Pizza-Burger-House\pizza-burger-house\src\assets\img\pizza" />
+      <recent name="D:\Pizza-Burger-House\pizza-burger-house\src\assets\img\burger" />
+      <recent name="D:\Pizza-Burger-House\pizza-burger-house" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.Angular CLI Server">
+    <configuration name="Tests (pizza-burger-house)" type="JavaScriptTestRunnerKarma">
+      <config-file value="$PROJECT_DIR$/karma.conf.js" />
+      <karma-package-dir value="$PROJECT_DIR$/node_modules/@angular/cli" />
+      <working-directory value="$PROJECT_DIR$" />
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="E2E Tests (pizza-burger-house)" type="JavaScriptTestRunnerProtractor">
+      <config-file value="$PROJECT_DIR$/e2e/protractor.conf.js" />
+      <node-interpreter value="project" />
+      <protractor-package value="$PROJECT_DIR$/node_modules/protractor" />
+      <protractor-options value="" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Angular Application" type="JavascriptDebugType" uri="http://localhost:4200">
+      <method v="2" />
+    </configuration>
+    <configuration name="Angular CLI Server" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="14a12890-fa0b-4609-9cd5-fe9014c3518d" name="Default Changelist" comment="" />
+      <created>1595242404916</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1595242404916</updated>
+      <workItem from="1595242411475" duration="43625000" />
+      <workItem from="1594894694839" duration="33575000" />
+      <workItem from="1595228551491" duration="6244000" />
+      <workItem from="1595136379438" duration="234000" />
+      <workItem from="1595249208179" duration="1098000" />
+      <workItem from="1595587218169" duration="658000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1595100913178">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1595100913178" />
+    <state x="546" y="249" width="348" height="298" key="org.angular.cli.generate" timestamp="1595497000690">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="546" y="249" width="348" height="298" key="org.angular.cli.generate/0.0.1366.728@0.0.1366.728" timestamp="1595497000690" />
+    <state x="339" y="164" key="run.anything.popup" timestamp="1595244159951">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="339" y="164" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1595244159951" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1595442737758">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1595442737758" />
+  </component>
+</project>

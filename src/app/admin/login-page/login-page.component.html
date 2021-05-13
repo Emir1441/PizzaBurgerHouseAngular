@@ -1,0 +1,67 @@
+<section class="container-fluid">
+    <section class="row justify-content-center">
+
+        <section class="col-12 col-sm-6 col-md-3">
+            <form [formGroup]="loginForm" (ngSubmit)="submit" class="form-container">
+                <h1 class="text-center">Войти</h1>
+
+                <div class="form-group text-danger" *ngIf="httpAuth.invalidLogin">
+                    Неверный пороль или логин
+                </div>
+
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" class="form-control" formControlName="email" name="email"
+                        id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Введите логин">
+
+                    <div *ngIf="loginForm.get('email').touched && loginForm.get('email').invalid" class="validation">
+                        <small *ngIf="loginForm.get('email').errors.required">
+                            <h4 class="text-center text-danger">Введите Email</h4>
+                        </small>
+                        <small *ngIf="loginForm.get('email').errors.email">
+                            <h4 class="text-center text-danger">Введите валидный логин</h4>
+                        </small>
+                    </div>
+
+
+                </div>
+
+                <div class="form-group ">
+                    <label for="exampleInputPassword1">Пороль</label>
+                    <input type="password" class="form-control" formControlName="password" name="password"
+                        id="exampleInputPassword1" placeholder="Введите пороль">
+
+
+                    <div *ngIf="loginForm.get('password').touched && loginForm.get('password').invalid">
+
+                        <small *ngIf="loginForm.get('password').errors.required">
+                            <h4 class="text-center text-danger">Введите пороль</h4>
+                        </small>
+
+
+
+                        <small *ngIf="loginForm.get('password').errors.minlength">
+                            <h4 class="text-danger">Пороль должен больше
+
+                                {{loginForm.get('password').errors.minlength.requiredLength}}
+                                Сейчас {{loginForm.get('password').errors.minlength.actualLength}}</h4>
+                        </small>
+
+
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block" [disabled]="loginForm.invalid || submited"
+                    (click)="submit()">Войти </button>
+
+
+
+
+
+            </form>
+
+
+
+        </section>
+
+    </section>
+</section>
