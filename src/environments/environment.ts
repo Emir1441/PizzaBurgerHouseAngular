@@ -4,11 +4,11 @@
 
 export const environment = {
   production: false,
-  // apiKey: "AIzaSyCHpG1NcpooLayYnHaOq9RB_fJzOk5KbCU",
+
   // ApiUrl: "http://pizza-burger-house.somee.com/"
   ApiUrl: "https://localhost:44320"
 };
-// Тут нужно изменить
+
 /*
  * For easier debugging in development mode, you can import the following file
  * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.
