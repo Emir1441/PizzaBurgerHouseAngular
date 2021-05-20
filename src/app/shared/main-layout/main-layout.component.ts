@@ -18,6 +18,7 @@ export class MainLayoutComponent {
   constructor(private cart: Cart, public categoryService: CategoryService) { }
 
   ngOnInit() {
+    this.getAllCategory();
   }
   images = ['./assets/image/slide/slideOne.jpg', './assets/image/slide/slideTwo.jpg', './assets/image/slide/slideThree.jpg']
 
@@ -31,6 +32,12 @@ export class MainLayoutComponent {
 
   get totalPrice(): number {
     return this.cart.totalPrice;
+  }
+
+  getAllCategory() {
+    this.categoryService.getAllCategory().subscribe(res => {
+      this.categories = res
+    })
   }
 
 

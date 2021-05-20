@@ -1,4 +1,4 @@
-<div class="container">
+<div *ngIf="!spinner; else loader" class="container">
 
      <div *ngFor="let product of products" class="product-block">
           <div class="product-img">
@@ -16,3 +16,11 @@
      </div>
 
 </div>
+
+
+<ng-template #loader>
+     <div>
+          <p class="fig" class="fig"> <img src="./assets/image/preloader.gif" alt="">
+          </p>
+     </div>
+</ng-template>

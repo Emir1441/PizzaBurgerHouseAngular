@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Cart } from 'src/app/models/cart.model';
 import { Product } from 'src/app/models/model';
+import { CategoryService } from 'src/app/services/category.service';
 import { ProductService } from 'src/app/services/product.service';
 import { environment } from 'src/environments/environment';
 
@@ -15,19 +16,25 @@ export class PizzaPageComponent implements OnInit {
   products: Product[];
   spinner = false
 
-  constructor(private productService: ProductService, public cart: Cart) { }
+  constructor(private productService: ProductService, public cart: Cart, private categoryService: CategoryService) { }
 
   ngOnInit(): void {
-    this.getAllProducts();
+    this.spinner = true
+    this.categoryService.getProductByIdCategory(1).subscribe(res => {
+      console.log(this.products = res)
+      this.spinner = false
+    })
   }
 
   getAllProducts() {
 
-    this.productService.getAllProduct().subscribe(res => {
-      console.log(this.products = res.filter(rez => rez.productType === 'Пицца'))
-      this.spinner = true
-    })
-    this.spinner = false
+    // this.productService.getAllProduct().subscribe(res => {
+    //   console.log(this.products = res.filter(rez => rez.categoryId == 1))
+    //   this.spinner = true
+    // })
+    // this.spinner = false
+
+
   }
 
 

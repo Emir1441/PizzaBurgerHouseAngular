@@ -74,13 +74,10 @@
 
     <div class="col-md-6 ">
         <ul class="list-group ">
-
             <a *ngFor="let category of categories | searchCategory:searchCategory"
                 [routerLink]="['/admin', 'categories',category.categoryId]" class="lineNone ">
-                <li class="list-group-item hoverList">{{category.categoryName}}</li>
+                <li class="list-group-item hoverList">{{category.categoryId}} {{category.categoryName}}</li>
             </a>
-
-
         </ul>
 
     </div>

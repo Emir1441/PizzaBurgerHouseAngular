@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Cart } from 'src/app/models/cart.model';
 import { Product } from 'src/app/models/model';
+import { CategoryService } from 'src/app/services/category.service';
 import { ProductService } from 'src/app/services/product.service';
 import { environment } from 'src/environments/environment';
 
@@ -9,26 +10,30 @@ import { environment } from 'src/environments/environment';
   templateUrl: './drink.component.html',
   styleUrls: ['./drink.component.css']
 })
-export class DrinkComponent {
+export class DrinkComponent implements OnInit {
 
 
-  ngOnInit(): void {
-    this.getAllProducts();
-  }
+
 
   products: Product[];
   apiUrl: string = environment.ApiUrl;
+  spinner = false
 
-  constructor(private productService: ProductService, public cart: Cart) { }
+  constructor(private productService: ProductService, public cart: Cart, private categoryService: CategoryService) { }
 
-  getAllProducts() {
-    this.productService.getAllProduct().subscribe(res => {
-      console.log(this.products = res.filter(rez => rez.productType === 'Напиток'))
+  ngOnInit(): void {
+    this.spinner = true
+    this.categoryService.getProductByIdCategory(4).subscribe(res => {
+      console.log(this.products = res)
+      this.spinner = false
     })
-
   }
+
+
+
   addCart(product) {
     this.cart.addProduct(product)
   }
+
 
 }

@@ -6,6 +6,7 @@ export class Product {
     productWeight?: any
     price?: any
     uploadImage: any
+    categoryId: number
 }
 export class PaymentMethod {
     paymentType: string

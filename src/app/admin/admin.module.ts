@@ -53,19 +53,19 @@ import { ProductFormComponent } from "./categories-page/categories-form/product-
 
 
 
-
+    // , canActivate: [AuthGuard]
 
 
     RouterModule.forChild([
       {
         path: 'admin', component: AdminLayoutComponent, children: [
-          { path: '', redirectTo: '/admin/category', pathMatch: 'full', canActivate: [AuthGuard] },
-          { path: 'delivery', component: DeliveryPageComponent, canActivate: [AuthGuard] },
-          { path: 'category', component: CategoriesPageComponent, canActivate: [AuthGuard] },
-          { path: 'edit/:productId', component: EditProductComponent, canActivate: [AuthGuard] },
-          { path: 'categories/new', component: CategoriesFormComponent, canActivate: [AuthGuard] },
-          { path: 'categories/:categoryId', component: CategoriesFormComponent, canActivate: [AuthGuard] },
-          { path: 'view/:orderId', component: DeliveryViewComponent, canActivate: [AuthGuard] },
+          { path: '', redirectTo: '/admin/category', pathMatch: 'full' },
+          { path: 'delivery', component: DeliveryPageComponent },
+          { path: 'category', component: CategoriesPageComponent },
+          { path: 'edit/:productId', component: EditProductComponent },
+          { path: 'categories/new', component: CategoriesFormComponent },
+          { path: 'categories/:categoryId', component: CategoriesFormComponent },
+          { path: 'view/:orderId', component: DeliveryViewComponent },
           { path: '**', redirectTo: '/admin/category' }
         ]
 

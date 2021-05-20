@@ -30,6 +30,8 @@ import { ProductService } from './services/product.service';
 import { RepositoryService } from './services/repository.service';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { ProductPageComponent } from './product-list/product-page/product-page.component';
+
 
 
 
@@ -60,6 +62,8 @@ export function tokenGetter() {
     CheckoutPaymentComponent,
 
     OrderConfirmationComponent,
+
+    ProductPageComponent,
 
 
 

@@ -14,9 +14,21 @@ export class CategoriesPageComponent implements OnInit {
 
 
 
+
+
+
+
+
+
   constructor(public categoryService: CategoryService, private modalService: NgbModal) { }
 
+
+
   ngOnInit(): void {
+
+
+
+
     this.getAll()
 
 
@@ -32,11 +44,19 @@ export class CategoriesPageComponent implements OnInit {
     this.categoryService.getAllCategory().subscribe(res => {
       this.categories = res
     })
+
+
+
+
+
+
+
   }
-
-
-
-
-
-
 }
+
+
+
+
+
+
+
