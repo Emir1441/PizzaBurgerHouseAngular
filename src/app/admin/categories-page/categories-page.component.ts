@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { Observable } from 'rxjs';
-import { Category } from 'src/app/models/model';
 import { CategoryService } from 'src/app/services/category.service';
 
 @Component({

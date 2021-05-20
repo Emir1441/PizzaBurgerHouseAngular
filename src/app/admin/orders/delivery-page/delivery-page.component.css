@@ -1,10 +1,10 @@
 .fig {
  
-    display: block; /* Блочный элемент (для старых браузеров) */
-    text-align: center; /* Выравнивание по центру */
-    font-style: italic; /* Курсивное начертание */
-    margin-top: 0; /* Отступ сверху */
-    margin-bottom: 5px; /* Отступ снизу */
-    color: #666; /* Цвет подрисуночной подписи */
+    display: block; 
+    text-align: center;
+    font-style: italic; 
+    margin-top: 0; 
+    margin-bottom: 5px; 
+    color: #666; 
    
    }

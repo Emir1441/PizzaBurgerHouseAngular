@@ -3,11 +3,6 @@ import { CommonModule } from "@angular/common";
 import { Route, RouterModule, Routes } from "@angular/router";
 import { AdminLayoutComponent } from "./shared/admin-layout/admin-layout.component";
 
-
-
-
-
-
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LoginPageComponent } from "./login-page/login-page.component";
@@ -21,10 +16,10 @@ import { DeliveryPageComponent } from "./orders/delivery-page/delivery-page.comp
 import { DeliveryViewComponent } from "./orders/delivery-page/delivery-view/delivery-view.component";
 import { CategoriesPageComponent } from './categories-page/categories-page.component';
 import { CategoriesFormComponent } from './categories-page/categories-form/categories-form.component';
-import { PositionsFormComponent } from './categories-page/categories-form/positions-form/positions-form.component';
-import { AddPisitionComponent } from './categories-page/add-pisition/add-pisition.component';
-import { EditPositionComponent } from './categories-page/edit-position/edit-position.component';
 import { SearchPipe } from "./categories-page/search.pipe";
+import { EditProductComponent } from "./categories-page/edit-product/edit-product.component";
+import { AddProductComponent } from "./categories-page/add-product/add-product.component";
+import { ProductFormComponent } from "./categories-page/categories-form/product-form/product-form.component";
 
 
 
@@ -42,9 +37,9 @@ import { SearchPipe } from "./categories-page/search.pipe";
     DeliveryViewComponent,
     CategoriesPageComponent,
     CategoriesFormComponent,
-    PositionsFormComponent,
-    AddPisitionComponent,
-    EditPositionComponent,
+    ProductFormComponent,
+    AddProductComponent,
+    EditProductComponent,
     SearchPipe
   ],
 
@@ -67,7 +62,7 @@ import { SearchPipe } from "./categories-page/search.pipe";
           { path: '', redirectTo: '/admin/category', pathMatch: 'full', canActivate: [AuthGuard] },
           { path: 'delivery', component: DeliveryPageComponent, canActivate: [AuthGuard] },
           { path: 'category', component: CategoriesPageComponent, canActivate: [AuthGuard] },
-          { path: 'edit/:productId', component: EditPositionComponent, canActivate: [AuthGuard] },
+          { path: 'edit/:productId', component: EditProductComponent, canActivate: [AuthGuard] },
           { path: 'categories/new', component: CategoriesFormComponent, canActivate: [AuthGuard] },
           { path: 'categories/:categoryId', component: CategoriesFormComponent, canActivate: [AuthGuard] },
           { path: 'view/:orderId', component: DeliveryViewComponent, canActivate: [AuthGuard] },

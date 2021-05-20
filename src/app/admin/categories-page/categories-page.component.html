@@ -74,7 +74,7 @@
 
     <div class="col-md-6 ">
         <ul class="list-group ">
-            <!-- ngFor category [routerLink]="['/admin',category.Id]" -->
+
             <a *ngFor="let category of categories | searchCategory:searchCategory"
                 [routerLink]="['/admin', 'categories',category.categoryId]" class="lineNone ">
                 <li class="list-group-item hoverList">{{category.categoryName}}</li>

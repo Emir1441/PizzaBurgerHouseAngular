@@ -22,7 +22,7 @@ export class UploadImageComponent implements OnInit {
   ngOnInit(): void {
     this.addImage = this.fb.group({
       uploadedFile: [null, Validators.required]
-      // uploadedFile: [null]
+
     })
   }
 

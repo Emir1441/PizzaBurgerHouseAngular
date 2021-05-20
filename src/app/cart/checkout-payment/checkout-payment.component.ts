@@ -1,10 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Cart } from 'src/app/models/cart.model';
 import { Order } from 'src/app/models/order.model';
-import { RepositoryService } from 'src/app/services/repository.service';
+
 
 @Component({
   selector: 'app-checkout-payment',

@@ -2,17 +2,16 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { Observable } from 'rxjs';
-import { Category } from 'src/app/models/model';
+
 import { CategoryService } from 'src/app/services/category.service';
 import { ProductService } from 'src/app/services/product.service';
 
 @Component({
-  selector: 'app-add-pisition',
-  templateUrl: './add-pisition.component.html',
-  styleUrls: ['./add-pisition.component.css']
+  selector: 'app-add-product',
+  templateUrl: './add-product.component.html',
+  styleUrls: ['./add-product.component.css']
 })
-export class AddPisitionComponent implements OnInit {
+export class AddProductComponent implements OnInit {
 
   form: FormGroup
   categories = []
@@ -29,7 +28,7 @@ export class AddPisitionComponent implements OnInit {
 
 
     this.form = new FormGroup({
-      // productType: new FormControl('', [Validators.required]),
+
       productName: new FormControl('', [Validators.required]),
       productDescription: new FormControl(''),
       productWeight: new FormControl(''),

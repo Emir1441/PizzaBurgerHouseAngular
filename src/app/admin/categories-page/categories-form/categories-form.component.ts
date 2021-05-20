@@ -55,7 +55,7 @@ export class CategoriesFormComponent implements OnInit {
         })
       }
       this.form.enable()
-      //form esible
+
 
     })
   }

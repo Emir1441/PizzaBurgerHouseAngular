@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+
 import { Cart } from 'src/app/models/cart.model';
 @Component({
   selector: 'app-main-layout',
@@ -13,7 +13,7 @@ export class MainLayoutComponent {
 
 
 
-  constructor(private modalService: NgbModal, private cart: Cart) { }
+  constructor(private cart: Cart) { }
 
   ngOnInit() {
   }

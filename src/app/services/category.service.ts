@@ -38,4 +38,9 @@ export class CategoryService {
     return this.http.patch<void>(`${environment.ApiUrl}/api/category/`, category)
   }
 
+  getProductByIdCategory(categoryId: number): Observable<any[]> {
+    return this.http.get<any[]>(`${environment.ApiUrl}/api/category/product/${categoryId}`)
+
+  }
+
 }

@@ -20,7 +20,6 @@ export class Order {
 
 
 
-    submitted: boolean = false;
 
     orderConfirmation: OrderConfirmation;
 

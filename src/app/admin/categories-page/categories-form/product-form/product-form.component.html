@@ -6,7 +6,7 @@
         </div>
         <div>
 
-            <button type="button" class="btn btn-primary btn-block" (click)="addPositionModal(addPositionContent)">
+            <button type="button" class="btn btn-primary btn-block" (click)="addProductModal(addPositionContent)">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg"
                     viewBox="0 0 16 16">
                     <path
@@ -20,7 +20,7 @@
 
     <ng-template #addPositionContent let-modal class="">
         <div class="modal-body">
-            <app-add-pisition></app-add-pisition>
+            <app-add-product></app-add-product>
         </div>
     </ng-template>
 
@@ -30,7 +30,7 @@
 
 
 
-<div *ngIf="positions.length  !== 0; else empty" class="table-responsive">
+<div *ngIf="products.length  !== 0; else empty" class="table-responsive">
     <table class="table table-borderless">
         <thead>
             <tr>
@@ -46,17 +46,16 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let position of positions">
-                <td>{{position.productId}}</td>
-                <td>{{position.productName}}</td>
-                <!-- <td>{{position.productType}}</td> -->
-                <td>{{position.productDescription}}</td>
-                <td>{{position.productWeight}} грамм</td>
-                <td>{{position.price }} руб</td>
-                <td>Category Id {{position.categoryId }}</td>
+            <tr *ngFor="let product of products">
+                <td>{{product.productId}}</td>
+                <td>{{product.productName}}</td>
+                <td>{{product.productDescription}}</td>
+                <td>{{product.productWeight}} грамм</td>
+                <td>{{product.price }} руб</td>
 
 
-                <img [src]='apiUrl + position.uploadImage.path' style="height: 100px; width: 100px;">
+
+                <img [src]='apiUrl + product.uploadImage.path' style="height: 100px; width: 100px;">
 
 
                 <td><button class="btn btn-primary" (click)="editModal(editFormContent)">Редактировать</button>
@@ -65,23 +64,20 @@
 
                 <ng-template #editFormContent let-modal class="">
                     <div class="modal-body">
-                        <!-- <app-edit-page [productId]="position.productId"></app-edit-page> -->
-                        <!-- <app-edit-page [productId]="position.productId"></app-edit-page> -->
-                        <app-edit-position [productId]="position.productId" [categoryId]="position.categoryId">
-                        </app-edit-position>
+
+                        <app-edit-product [productId]="product.productId" [categoryId]="product.categoryId">
+                        </app-edit-product>
                     </div>
                 </ng-template>
 
 
 
-                <!-- <td><button class="btn btn-primary" (click)="editModal(editFormContent)"
-                        [routerLink]=" ['/admin','edit',position.productId]">Edit</button>
-                </td> -->
+
 
 
 
                 <td><button class="  btn btn-danger"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                            (click)="deletePosition(position?.productId)" fill="currentColor" class="bi bi-trash"
+                            (click)="deleteProduct(product?.productId)" fill="currentColor" class="bi bi-trash"
                             viewBox="0 0 16 16">
                             <path
                                 d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
@@ -98,5 +94,5 @@
 </div>
 
 <ng-template #empty>
-    <h2>В категории нет позиции</h2>
+    <h2>В категории нет продуктов</h2>
 </ng-template>

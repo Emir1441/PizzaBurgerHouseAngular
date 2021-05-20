@@ -13,12 +13,12 @@ export class PaymentMethod {
 
 export class DeliveryOrder {
     cartLineId: number;
-    customerCity: string; // доставка город
-    customerStreet: string; // доставка улица
-    customerHouseNumber: string; //доставка номер дома
-    customerApartmentNumber: string; // доставка номер квартиры
+    customerCity: string;
+    customerStreet: string;
+    customerHouseNumber: string;
+    customerApartmentNumber: string;
 
-    customerEntranceNumber: string; // доставка номер подъезда
+    customerEntranceNumber: string;
 
 }
 
