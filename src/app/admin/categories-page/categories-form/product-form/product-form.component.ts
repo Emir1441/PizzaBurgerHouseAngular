@@ -14,10 +14,11 @@ export class ProductFormComponent implements OnInit {
 
   apiUrl: string = environment.ApiUrl;
   products = []
+  @Input('categoryId') categoryId: number;
 
   constructor(private modalService: NgbModal, public productService: ProductService, public categoryService: CategoryService) { }
 
-  @Input('categoryId') categoryId: number;
+
 
 
 

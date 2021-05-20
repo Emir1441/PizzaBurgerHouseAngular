@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 
 
 import { Cart } from 'src/app/models/cart.model';
+import { CategoryService } from 'src/app/services/category.service';
 @Component({
   selector: 'app-main-layout',
   templateUrl: './main-layout.component.html',
@@ -10,10 +11,11 @@ import { Cart } from 'src/app/models/cart.model';
 
 export class MainLayoutComponent {
   isCollapsed = true;
+  categories = []
 
 
 
-  constructor(private cart: Cart) { }
+  constructor(private cart: Cart, public categoryService: CategoryService) { }
 
   ngOnInit() {
   }
@@ -30,6 +32,8 @@ export class MainLayoutComponent {
   get totalPrice(): number {
     return this.cart.totalPrice;
   }
+
+
 
 
 }
