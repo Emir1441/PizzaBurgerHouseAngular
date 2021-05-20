@@ -1,0 +1,69 @@
+<div class=" conteiner">
+    <form [formGroup]="form" (ngSubmit)="onSubmit() " class="col-m-4">
+        <!-- <h2 class="text-center">Добавить позицию</h2>
+        <div class="my-3">
+            <label class="form-label">Категория продукта</label>
+
+
+            <select formControlName="category" class="form-select" aria-label="Default select example">
+                <option>Выбирите...</option>
+                <option *ngFor="let cat of categories">{{cat.categoryName}}</option>
+
+            </select>
+
+            <div *ngIf="form.get('category').touched && form.get('category').invalid">
+                <small>
+                    <h4 class="text-center text-danger">Введите тип </h4>
+                </small>
+            </div>
+
+        </div> -->
+
+        <div>
+            <label class="form-label">Наименнование</label>
+            <input type="text" formControlName="productName" class="form-control">
+            <div *ngIf="form.get('productName').touched && form.get('productName').invalid">
+                <small>
+                    <h4 class="text-center text-danger">Введите наименнование</h4>
+                </small>
+            </div>
+        </div>
+
+        <div>
+            <label class="form-label">Описание</label>
+            <input type="text" formControlName="productDescription" class="form-control">
+        </div>
+
+        <div>
+            <label class="form-label">Вес</label>
+            <input type="number" formControlName="productWeight" class="form-control">
+        </div>
+
+        <div>
+            <label class="form-label">Цена</label>
+            <input type="number" formControlName="price" class="form-control">
+            <small *ngIf="form.get('price').touched && form.get('price').invalid">
+                <h4 class="text-center text-danger">Введите стоимость</h4>
+            </small>
+        </div>
+
+
+        <div>
+            <label class="form-label">ID изображения</label>
+            <input type="number" formControlName="uploadImageId" class="form-control">
+            <small *ngIf="form.get('uploadImageId').touched && form.get('uploadImageId').invalid">
+                <h4 class="text-center text-danger">Введите ID изображения</h4>
+            </small>
+        </div>
+
+
+
+
+        <div class=" mt-2 d-flex justify-content-between ">
+            <div> <button type="button" class="btn btn-warning" (click)="closeModal()">Отмена</button></div>
+            <div> <button type="submit" class="btn btn-primary " [disabled]="form.invalid">Сохранить
+                </button></div>
+        </div>
+
+    </form>
+</div>

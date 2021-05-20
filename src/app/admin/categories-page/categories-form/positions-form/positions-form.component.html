@@ -1,0 +1,102 @@
+<div class=" mt-5 container">
+
+    <div class="d-flex justify-content-between">
+        <div>
+            <h1>Позиции:</h1>
+        </div>
+        <div>
+
+            <button type="button" class="btn btn-primary btn-block" (click)="addPositionModal(addPositionContent)">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M8 0a1 1 0 0 1 1 1v6h6a1 1 0 1 1 0 2H9v6a1 1 0 1 1-2 0V9H1a1 1 0 0 1 0-2h6V1a1 1 0 0 1 1-1z" />
+                </svg>
+                Добавить
+                позицию</button>
+        </div>
+    </div>
+
+
+    <ng-template #addPositionContent let-modal class="">
+        <div class="modal-body">
+            <app-add-pisition></app-add-pisition>
+        </div>
+    </ng-template>
+
+
+</div>
+
+
+
+
+<div *ngIf="positions.length  !== 0; else empty" class="table-responsive">
+    <table class="table table-borderless">
+        <thead>
+            <tr>
+                <td>Id</td>
+                <td>Наименнование</td>
+                <!-- <td>Тип товара</td> -->
+                <td>Описание</td>
+                <td>Вес</td>
+                <td>Цена</td>
+                <td>Изображение</td>
+                <td></td>
+                <td></td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let position of positions">
+                <td>{{position.productId}}</td>
+                <td>{{position.productName}}</td>
+                <!-- <td>{{position.productType}}</td> -->
+                <td>{{position.productDescription}}</td>
+                <td>{{position.productWeight}} грамм</td>
+                <td>{{position.price }} руб</td>
+                <td>Category Id {{position.categoryId }}</td>
+
+
+                <img [src]='apiUrl + position.uploadImage.path' style="height: 100px; width: 100px;">
+
+
+                <td><button class="btn btn-primary" (click)="editModal(editFormContent)">Редактировать</button>
+                </td>
+
+
+                <ng-template #editFormContent let-modal class="">
+                    <div class="modal-body">
+                        <!-- <app-edit-page [productId]="position.productId"></app-edit-page> -->
+                        <!-- <app-edit-page [productId]="position.productId"></app-edit-page> -->
+                        <app-edit-position [productId]="position.productId" [categoryId]="position.categoryId">
+                        </app-edit-position>
+                    </div>
+                </ng-template>
+
+
+
+                <!-- <td><button class="btn btn-primary" (click)="editModal(editFormContent)"
+                        [routerLink]=" ['/admin','edit',position.productId]">Edit</button>
+                </td> -->
+
+
+
+                <td><button class="  btn btn-danger"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            (click)="deletePosition(position?.productId)" fill="currentColor" class="bi bi-trash"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
+                            <path fill-rule="evenodd"
+                                d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
+                        </svg></button>
+                </td>
+
+            </tr>
+
+        </tbody>
+    </table>
+
+</div>
+
+<ng-template #empty>
+    <h2>В категории нет позиции</h2>
+</ng-template>

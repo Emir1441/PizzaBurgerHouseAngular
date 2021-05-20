@@ -29,12 +29,12 @@ export class AdminLayoutComponent {
 
   }
 
-  addProductModal(content) {
-    this.modalService.open(content, { centered: true });
-  }
-  addImageModal(content) {
-    this.modalService.open(content, { centered: true });
-  }
+  // addProductModal(content) {
+  //   this.modalService.open(content, { centered: true });
+  // }
+  // addImageModal(content) {
+  //   this.modalService.open(content, { centered: true });
+  // }
 
 
 }

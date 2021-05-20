@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ProductService } from 'src/app/services/product.service';
 
 @Component({
@@ -16,11 +17,12 @@ export class UploadImageComponent implements OnInit {
   public imagePath;
   imgURL: any;
 
-  constructor(public fb: FormBuilder, private productService: ProductService) { }
+  constructor(public fb: FormBuilder, private productService: ProductService, private modalService: NgbModal) { }
 
   ngOnInit(): void {
     this.addImage = this.fb.group({
-      uploadedFile: [null]
+      uploadedFile: [null, Validators.required]
+      // uploadedFile: [null]
     })
   }
 
@@ -48,6 +50,11 @@ export class UploadImageComponent implements OnInit {
       console.log(this.responseIdImage = res)
 
     })
+  }
+
+
+  closeModal() {
+    this.modalService.dismissAll();
   }
 
 }

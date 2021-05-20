@@ -13,6 +13,7 @@ export class PizzaPageComponent implements OnInit {
 
   apiUrl: string = environment.ApiUrl;
   products: Product[];
+  spinner = false
 
   constructor(private productService: ProductService, public cart: Cart) { }
 
@@ -21,9 +22,12 @@ export class PizzaPageComponent implements OnInit {
   }
 
   getAllProducts() {
+
     this.productService.getAllProduct().subscribe(res => {
       console.log(this.products = res.filter(rez => rez.productType === 'Пицца'))
+      this.spinner = true
     })
+    this.spinner = false
   }
 
 

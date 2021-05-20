@@ -11,14 +11,17 @@ export class DeliveryPageComponent implements OnInit {
 
 
   deliveryOrders: any
+  spinner = false
 
 
   constructor(private orderService: OrderService, private modalService: NgbModal) { }
 
   ngOnInit(): void {
     this.orderService.getDeliveryOrders().subscribe(res => {
+      this.spinner = true
       console.log(this.deliveryOrders = res)
     })
+    this.spinner = false
   }
 
 

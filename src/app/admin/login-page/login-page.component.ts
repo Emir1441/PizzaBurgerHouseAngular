@@ -1,3 +1,4 @@
+import { TransitiveCompileNgModuleMetadata } from '@angular/compiler';
 import { Component, Input, OnInit, Output } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 
@@ -14,6 +15,7 @@ export class LoginPageComponent implements OnInit {
 
   submited = false;
   loginForm: FormGroup;
+  spinner = false;
 
 
 
@@ -27,6 +29,10 @@ export class LoginPageComponent implements OnInit {
 
   submit() {
     this.httpAuth.login(this.loginForm.value);
+
+
+
+
 
   }
 

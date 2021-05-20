@@ -1,10 +1,17 @@
-.fig {
- 
+input.ng-invalid.ng-touched{
+    border: 1px solid red;
+  }
+  
+  input.ng-valid.ng-touched{
+    border: 1px solid green;
+  }
+
+
+  .fig {
     display: block; /* Блочный элемент (для старых браузеров) */
     text-align: center; /* Выравнивание по центру */
     font-style: italic; /* Курсивное начертание */
     margin-top: 0; /* Отступ сверху */
     margin-bottom: 5px; /* Отступ снизу */
     color: #666; /* Цвет подрисуночной подписи */
-   
    }

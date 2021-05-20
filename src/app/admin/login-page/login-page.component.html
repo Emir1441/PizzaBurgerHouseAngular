@@ -3,9 +3,13 @@
 
         <section class="col-12 col-sm-6 col-md-3">
             <form [formGroup]="loginForm" (ngSubmit)="submit" class="form-container">
-                <h1 class="text-center">Войти</h1>
+                <h1 class="text-center">Войти
+
+
+                </h1>
 
                 <div class="form-group text-danger" *ngIf="httpAuth.invalidLogin">
+
                     Неверный пороль или логин
                 </div>
 
@@ -51,7 +55,8 @@
                     </div>
                 </div>
                 <button type="submit" class="btn btn-primary btn-block" [disabled]="loginForm.invalid || submited"
-                    (click)="submit()">Войти </button>
+                    (click)="submit()">Войти</button>
+
 
 
 
@@ -65,3 +70,6 @@
 
     </section>
 </section>
+<ng-template #loader>
+
+</ng-template>

@@ -1,0 +1,51 @@
+<div *ngIf="form">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+        <!-- <div>
+            <label for="inputAddress" class="form-label">Id</label>
+            <input type="text" formControlName="productId" class="form-control" id="inputAddress">
+        </div> -->
+
+
+
+        <div>
+            <label for="inputAddress" class="form-label">Наименнование позиции</label>
+            <input type="text" formControlName="productName" class="form-control" id="inputAddress">
+
+        </div>
+
+        <div>
+            <label for="inputAddress" class="form-label">Описание</label>
+            <input type="text" formControlName="productDescription" class="form-control" id="inputAddress">
+        </div>
+
+        <div>
+            <label for="inputAddress" class="form-label">Вес</label>
+            <input type="text" formControlName="productWeight" class="form-control" id="inputAddress">
+        </div>
+
+        <div>
+            <label for="inputAddress" class="form-label">Цена</label>
+            <input type="text" formControlName="price" class="form-control" id="inputAddress">
+        </div>
+
+        <div>
+            <img [src]='apiUrl + product?.uploadImage?.path' style="height: 100px; width: 100;">
+        </div>
+
+        <div>
+            <label for="inputAddress" class="form-label">ID изображения</label>
+            <input type="number" formControlName="uploadImageId" class="form-control" id="inputAddress">
+        </div>
+
+
+
+
+        <div class=" mt-2 d-flex justify-content-between ">
+            <div> <button type="button" class="btn btn-warning" (click)="closeModal()">Отмена</button></div>
+            <div> <button type="submit" class="btn btn-primary " [disabled]="form.invalid">Сохранить
+                </button></div>
+        </div>
+
+    </form>
+</div>

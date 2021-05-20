@@ -38,3 +38,7 @@ export class Login {
     email: string
     password: string
 }
+export class Category {
+    categoryId: number
+    categoryName: string
+}

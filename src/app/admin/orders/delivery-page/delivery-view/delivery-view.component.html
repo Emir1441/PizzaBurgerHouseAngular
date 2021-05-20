@@ -1,4 +1,4 @@
-<div class="table-responsive">
+<div *ngIf="spinner; else loader" class="table-responsive">
     <table class="table ">
         <thead class="text-white bg-primary">
             <tr>
@@ -26,3 +26,10 @@
         </tbody>
     </table>
 </div>
+
+<ng-template #loader>
+    <div>
+        <p class="fig" class="fig"> <img src="./assets/image/preloader.gif" alt="">
+        </p>
+    </div>
+</ng-template>

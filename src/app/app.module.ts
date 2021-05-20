@@ -34,6 +34,7 @@ import { environment } from '../environments/environment';
 
 
 
+
 export function tokenGetter() {
   return localStorage.getItem('jwt')
 }
@@ -58,6 +59,8 @@ export function tokenGetter() {
     CheckoutPaymentComponent,
 
     OrderConfirmationComponent,
+
+
 
 
 

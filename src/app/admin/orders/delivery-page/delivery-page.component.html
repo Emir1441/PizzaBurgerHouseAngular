@@ -1,13 +1,13 @@
-<div class="table-responsive">
-    <table class="table">
-        <thead class="text-white bg-primary">
+<div *ngIf="spinner; else loader" class="table-responsive">
+    <table class="table table-borderless">
+        <thead>
             <tr>
 
                 <td>№</td>
                 <td>Имя</td>
                 <td>Телефон</td>
                 <td>Email</td>
-                <td>Время</td>
+                <td>Дата</td>
 
 
 
@@ -40,7 +40,7 @@
                 <td>{{order.customerName}}</td>
                 <td>{{order.customerPhoneNumber}}</td>
                 <td>{{order.customerEmail}}</td>
-                <td>{{order.createOrder | date:'HH:mm dd.MM.yyyy'}}</td>
+                <td>{{order.createOrder }}</td>
 
 
                 <td>{{order.deliveryOrder.customerCity}}</td>
@@ -66,3 +66,14 @@
         </tbody>
     </table>
 </div>
+
+
+
+
+
+<ng-template #loader>
+    <div>
+        <p class="fig" class="fig"> <img src="./assets/image/preloader.gif" alt="">
+        </p>
+    </div>
+</ng-template>

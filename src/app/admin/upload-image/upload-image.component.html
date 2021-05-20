@@ -17,7 +17,15 @@
         <input #file type="file" (change)="uploadFile(file.files)" class="form-control" id="customFile" />
     </div>
 
-    <div class="my-3">
-        <button type="submit" class="btn btn-primary btn-block">Сохранить изображение</button>
+
+
+
+    <div class=" mt-2 d-flex justify-content-between ">
+        <div> <button type="button" class="btn btn-warning" (click)="closeModal()">Отмена</button></div>
+        <div> <button type="submit" class="btn btn-primary " [disabled]="addImage.invalid">Сохранить
+            </button></div>
     </div>
+
+
+
 </form>

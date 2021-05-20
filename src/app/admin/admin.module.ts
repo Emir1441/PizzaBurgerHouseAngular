@@ -4,14 +4,14 @@ import { Route, RouterModule, Routes } from "@angular/router";
 import { AdminLayoutComponent } from "./shared/admin-layout/admin-layout.component";
 
 
-import { AddPageComponent } from './add-page/add-page.component';
 
-import { EditPageComponent } from './edit-page/edit-page.component';
+
+
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LoginPageComponent } from "./login-page/login-page.component";
-import { ListPageComponent } from './list-page/list-page.component';
+
 import { AuthGuard } from "../guards/auth.guard";
 
 import { UploadImageComponent } from './upload-image/upload-image.component';
@@ -19,6 +19,12 @@ import { UploadImageComponent } from './upload-image/upload-image.component';
 
 import { DeliveryPageComponent } from "./orders/delivery-page/delivery-page.component";
 import { DeliveryViewComponent } from "./orders/delivery-page/delivery-view/delivery-view.component";
+import { CategoriesPageComponent } from './categories-page/categories-page.component';
+import { CategoriesFormComponent } from './categories-page/categories-form/categories-form.component';
+import { PositionsFormComponent } from './categories-page/categories-form/positions-form/positions-form.component';
+import { AddPisitionComponent } from './categories-page/add-pisition/add-pisition.component';
+import { EditPositionComponent } from './categories-page/edit-position/edit-position.component';
+import { SearchPipe } from "./categories-page/search.pipe";
 
 
 
@@ -31,18 +37,17 @@ import { DeliveryViewComponent } from "./orders/delivery-page/delivery-view/deli
 @NgModule({
   declarations: [AdminLayoutComponent,
     LoginPageComponent,
-    AddPageComponent,
-
-    EditPageComponent,
-
-    ListPageComponent,
-
     UploadImageComponent,
     DeliveryPageComponent,
     DeliveryViewComponent,
-
-
+    CategoriesPageComponent,
+    CategoriesFormComponent,
+    PositionsFormComponent,
+    AddPisitionComponent,
+    EditPositionComponent,
+    SearchPipe
   ],
+
   imports: [
     CommonModule,
     FormsModule,
@@ -59,22 +64,14 @@ import { DeliveryViewComponent } from "./orders/delivery-page/delivery-view/deli
     RouterModule.forChild([
       {
         path: 'admin', component: AdminLayoutComponent, children: [
-          // { path: '', redirectTo: 'admin', pathMatch: 'full' },
-          { path: '', redirectTo: '/admin/login', pathMatch: 'full' },
-
-
-          { path: 'list', component: ListPageComponent, canActivate: [AuthGuard] },
-          // { path: 'add', component: AddPageComponent, canActivate: [AuthGuard] },
-
+          { path: '', redirectTo: '/admin/category', pathMatch: 'full', canActivate: [AuthGuard] },
           { path: 'delivery', component: DeliveryPageComponent, canActivate: [AuthGuard] },
-
-          // { path: 'upload', component: UploadImageComponent, canActivate: [AuthGuard] },
-          { path: 'edit/:productId', component: EditPageComponent, canActivate: [AuthGuard] },
-
-
+          { path: 'category', component: CategoriesPageComponent, canActivate: [AuthGuard] },
+          { path: 'edit/:productId', component: EditPositionComponent, canActivate: [AuthGuard] },
+          { path: 'categories/new', component: CategoriesFormComponent, canActivate: [AuthGuard] },
+          { path: 'categories/:categoryId', component: CategoriesFormComponent, canActivate: [AuthGuard] },
           { path: 'view/:orderId', component: DeliveryViewComponent, canActivate: [AuthGuard] },
-
-          { path: '**', redirectTo: 'admin' }
+          { path: '**', redirectTo: '/admin/category' }
         ]
 
       },

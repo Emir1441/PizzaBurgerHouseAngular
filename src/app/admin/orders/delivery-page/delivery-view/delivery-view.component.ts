@@ -15,6 +15,7 @@ export class DeliveryViewComponent implements OnInit {
   viewForm: FormGroup;
   cartLine: any;
   res: any
+  spinner = false
 
   constructor(private orderService: OrderService, private route: ActivatedRoute, private router: Router) { }
 
@@ -29,8 +30,11 @@ export class DeliveryViewComponent implements OnInit {
     ).subscribe((orderCartLine) => {
       console.log(this.cartLine = orderCartLine)
       this.res = this.cartLine.products
+      this.spinner = true
 
     })
+    this.spinner = false
   }
+
 
 }

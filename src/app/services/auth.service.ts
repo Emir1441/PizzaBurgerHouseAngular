@@ -22,6 +22,7 @@ export class AuthService {
 
   userName = localStorage.getItem("userName");
   userInfo: any
+
   invalidLogin: boolean;
 
 
@@ -38,8 +39,9 @@ export class AuthService {
         this.userInfo = res
         localStorage.setItem('jwt', this.userInfo.access_token)
         localStorage.setItem('userName', this.userInfo.username)
+
         this.invalidLogin = false;
-        this.router.navigate(["admin/list"])
+        this.router.navigate(["admin/category"])
       }, error => {
         this.invalidLogin = true;
       })

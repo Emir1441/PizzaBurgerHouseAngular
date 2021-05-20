@@ -1,3 +1,13 @@
+.hoverList:hover{
+    background-color: rgba(202, 194, 194, 0.5);
+    
+}
+.lineNone{
+    text-decoration: none;
+  
+}
+
+
 .fig {
  
     display: block; /* Блочный элемент (для старых браузеров) */
