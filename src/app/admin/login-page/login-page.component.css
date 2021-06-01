@@ -6,16 +6,10 @@
   margin: 10px;
   border-radius: 10px; 
   box-shadow: 0px 0px 10px 0px #000;
- 
- 
 } 
-
 input.ng-invalid.ng-touched{
   border: 1px solid red;
 }
-
 input.ng-valid.ng-touched{
   border: 1px solid green;
 }
-
-  

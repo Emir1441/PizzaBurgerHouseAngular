@@ -1,17 +1,13 @@
 <div class=" text-center bg-primary text-white p-2">
     <div class="navbar-brand">Pizza Burger House</div>
 </div>
-
 <h2 class="text-center m-2">Подтверждение заказа</h2>
-
 <div class="container">
     <table *ngIf="order.orderConfirmation; else nodata" class="table m-2">
         <tr>
             <th>Номер заказ</th>
             <td>{{order.orderConfirmation.orderId}}</td>
         </tr>
-
-
         <tr>
             <th>Ваше имя</th>
             <td>{{order.orderConfirmation.orderName}}</td>
@@ -20,31 +16,14 @@
             <th>Ваш телефон</th>
             <td>{{order.orderConfirmation.orderPhone}}</td>
         </tr>
-
         <tr>
             <th>Итоговая цена</th>
             <td>{{order.orderConfirmation.amount}}</td>
         </tr>
-
-
-
     </table>
-
-
-
     <div class="text-center">
         <button class="btn btn-primary m-1" routerLink="/" (click)="closeModal()">Готово</button>
     </div>
-
-
-
-
-
-
-
-
-
-
     <ng-template #nodata>
         <div class="d-flex justify-content-center x  m-3">
             <div class="spinner-border " role="status" style="width: 3rem; height: 3rem;">
@@ -52,5 +31,4 @@
             </div>
         </div>
     </ng-template>
-
 </div>

@@ -6,12 +6,8 @@ import { Order } from 'src/app/models/order.model';
   templateUrl: './payment.component.html',
   styleUrls: ['./payment.component.css']
 })
-export class PaymentComponent implements OnInit {
+export class PaymentComponent {
 
   pay: boolean = false;
   constructor(public order: Order) { }
-
-  ngOnInit(): void {
-  }
-
 }

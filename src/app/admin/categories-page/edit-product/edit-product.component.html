@@ -1,46 +1,37 @@
 <div *ngIf="form">
     <form [formGroup]="form" (ngSubmit)="onSubmit()">
-
-
-
         <div>
             <label for="inputAddress" class="form-label">Наименнование позиции</label>
             <input type="text" formControlName="productName" class="form-control" id="inputAddress">
 
         </div>
-
         <div>
             <label for="inputAddress" class="form-label">Описание</label>
             <input type="text" formControlName="productDescription" class="form-control" id="inputAddress">
         </div>
-
         <div>
             <label for="inputAddress" class="form-label">Вес</label>
             <input type="text" formControlName="productWeight" class="form-control" id="inputAddress">
         </div>
-
         <div>
             <label for="inputAddress" class="form-label">Цена</label>
             <input type="text" formControlName="price" class="form-control" id="inputAddress">
         </div>
-
         <div>
-            <img [src]='apiUrl + product?.uploadImage?.path' style="height: 100px; width: 100;">
+            <div *ngIf="product.path !== null; else image" class="text-center m-2">
+                <img [src]="apiUrl + product.path" height="150">
+            </div>
+            <ng-template #image>
+                <div class="text-center m-2">
+                    <img [src]="imgURL" height="150" *ngIf="imgURL">
+                </div>
+            </ng-template>
+            <input #file type="file" (change)="uploadFile(file.files)" class="form-control" id="customFile" />
         </div>
-
-        <div>
-            <label for="inputAddress" class="form-label">ID изображения</label>
-            <input type="number" formControlName="uploadImageId" class="form-control" id="inputAddress">
-        </div>
-
-
-
-
         <div class=" mt-2 d-flex justify-content-between ">
             <div> <button type="button" class="btn btn-warning" (click)="closeModal()">Отмена</button></div>
             <div> <button type="submit" class="btn btn-primary " [disabled]="form.invalid">Сохранить
                 </button></div>
         </div>
-
     </form>
 </div>

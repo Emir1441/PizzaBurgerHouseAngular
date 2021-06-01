@@ -12,13 +12,9 @@ import { AuthService } from 'src/app/services/auth.service';
   styleUrls: ['./login-page.component.css']
 })
 export class LoginPageComponent implements OnInit {
-
   submited = false;
   loginForm: FormGroup;
   spinner = false;
-
-
-
   constructor(private router: Router, public httpAuth: AuthService) { }
   ngOnInit() {
     this.loginForm = new FormGroup({
@@ -26,23 +22,7 @@ export class LoginPageComponent implements OnInit {
       password: new FormControl(null, [Validators.required, Validators.minLength(6)])
     })
   }
-
   submit() {
     this.httpAuth.login(this.loginForm.value);
-
-
-
-
-
   }
-
-
-
-
-
-
-
-
-
-
 }

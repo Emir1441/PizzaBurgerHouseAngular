@@ -1,42 +1,14 @@
 <div class=" mt-5 container">
-
-
-
     <div class="d-flex justify-content-between mb-5">
         <div>
-
             <h1>Категории</h1>
         </div>
-
-
-
-
         <div style="display: flex;">
-
-
-
-
-
-
-            <div class="mx-2"> <button type="button" (click)="addImageModal(addImgContent)"
-                    class="btn btn-warning  btn-block">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                        class="bi bi-plus-lg" viewBox="0 0 16 16">
-                        <path
-                            d="M8 0a1 1 0 0 1 1 1v6h6a1 1 0 1 1 0 2H9v6a1 1 0 1 1-2 0V9H1a1 1 0 0 1 0-2h6V1a1 1 0 0 1 1-1z" />
-                    </svg>
-                    Добавить
-                    изображение
-                </button></div>
+            <div class="mx-2"> <input _ngcontent-xil-c115="" type="text" [(ngModel)]="searchCategory"
+                    placeholder="Поиск категории" aria-label="Search" class="form-control form-control-dark col-md-12">
+            </div>
             <div class="mx-2">
-
-
-
-
-
-
-
-                <button routerLink="/admin/categories/new" type="button" class="btn btn-primary  btn-block">
+                <button routerLink="/admin/categories/new" type="button" class="btn btn-warning  btn-block">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                         class="bi bi-plus-lg" viewBox="0 0 16 16">
                         <path
@@ -45,33 +17,11 @@
                     Добавить
                     категорию
                 </button>
-
-
-
                 <div class="mt-3">
-                    <input _ngcontent-xil-c115="" type="text" [(ngModel)]="searchCategory" placeholder="Поиск категории"
-                        aria-label="Search" class="form-control form-control-dark col-md-12">
                 </div>
-
             </div>
-
-
-
-
-            <ng-template #addImgContent let-modal class="">
-                <div class="modal-body">
-                    <app-upload-image></app-upload-image>
-                </div>
-            </ng-template>
-
-
-
         </div>
     </div>
-
-
-
-
     <div class="col-md-6 ">
         <ul class="list-group ">
             <a *ngFor="let category of categories | searchCategory:searchCategory"
@@ -81,12 +31,7 @@
         </ul>
 
     </div>
-
-
-
-
 </div>
-
 <ng-template #loader>
     <div>
         <p class="fig" class="fig"> <img src="./assets/image/preloader.gif" alt="">

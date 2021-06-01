@@ -15,9 +15,7 @@ export class PizzaPageComponent implements OnInit {
   apiUrl: string = environment.ApiUrl;
   products: Product[];
   spinner = false
-
   constructor(private productService: ProductService, public cart: Cart, private categoryService: CategoryService) { }
-
   ngOnInit(): void {
     this.spinner = true
     this.categoryService.getProductByIdCategory(1).subscribe(res => {
@@ -25,21 +23,7 @@ export class PizzaPageComponent implements OnInit {
       this.spinner = false
     })
   }
-
-  getAllProducts() {
-
-    // this.productService.getAllProduct().subscribe(res => {
-    //   console.log(this.products = res.filter(rez => rez.categoryId == 1))
-    //   this.spinner = true
-    // })
-    // this.spinner = false
-
-
-  }
-
-
   addCart(product) {
     this.cart.addProduct(product)
   }
-
 }

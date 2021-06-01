@@ -8,17 +8,12 @@ import { DeliveryOrder } from '../models/model';
   providedIn: 'root'
 })
 export class OrderService {
-
   constructor(private http: HttpClient) { }
 
   getDeliveryOrders(): Observable<DeliveryOrder[]> {
     return this.http.get<DeliveryOrder[]>(`${environment.ApiUrl}/api/order/`)
   }
-
   getOrderId(id: number): Observable<DeliveryOrder> {
     return this.http.get<DeliveryOrder>(`${environment.ApiUrl}/api/order/${id}`)
-
   }
-
-
 }

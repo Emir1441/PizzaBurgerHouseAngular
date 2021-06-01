@@ -2,36 +2,19 @@
     <table class="table table-borderless">
         <thead>
             <tr>
-
                 <td>№</td>
                 <td>Имя</td>
                 <td>Телефон</td>
                 <td>Email</td>
                 <td>Дата</td>
-
-
-
-
                 <td>Город</td>
                 <td>Улица</td>
                 <td>Дома</td>
                 <td>Квартира</td>
-
-
-
-
                 <td>Подъезд</td>
-
-
                 <td>Оплата</td>
                 <td>Сумма</td>
                 <td></td>
-
-
-
-
-
-
             </tr>
         </thead>
         <tbody>
@@ -41,36 +24,19 @@
                 <td>{{order.customerPhoneNumber}}</td>
                 <td>{{order.customerEmail}}</td>
                 <td>{{order.createOrder }}</td>
-
-
                 <td>{{order.deliveryOrder.customerCity}}</td>
                 <td>{{order.deliveryOrder.customerStreet}}</td>
                 <td>{{order.deliveryOrder.customerHouseNumber}}</td>
                 <td>{{order.deliveryOrder.customerApartmentNumber}}</td>
                 <td>{{order.deliveryOrder.customerEntranceNumber}}</td>
-
-
-
                 <td>{{order.paymentMethod.paymentType}}</td>
                 <td>{{order.paymentMethod.totalPrice}}</td>
-
-
                 <td><button class="btn btn-primary" [routerLink]="['/admin','view', order.orderId]">Просмотреть
                     </button></td>
-
-
-
-
             </tr>
-
         </tbody>
     </table>
 </div>
-
-
-
-
-
 <ng-template #loader>
     <div>
         <p class="fig" class="fig"> <img src="./assets/image/preloader.gif" alt="">

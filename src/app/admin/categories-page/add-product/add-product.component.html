@@ -1,6 +1,5 @@
 <div class=" conteiner">
     <form [formGroup]="form" (ngSubmit)="onSubmit() " class="col-m-4">
-
         <div>
             <label class="form-label">Наименнование</label>
             <input type="text" formControlName="productName" class="form-control">
@@ -10,17 +9,14 @@
                 </small>
             </div>
         </div>
-
         <div>
             <label class="form-label">Описание</label>
             <input type="text" formControlName="productDescription" class="form-control">
         </div>
-
         <div>
             <label class="form-label">Вес</label>
             <input type="number" formControlName="productWeight" class="form-control">
         </div>
-
         <div>
             <label class="form-label">Цена</label>
             <input type="number" formControlName="price" class="form-control">
@@ -28,24 +24,16 @@
                 <h4 class="text-center text-danger">Введите стоимость</h4>
             </small>
         </div>
-
-
         <div>
-            <label class="form-label">ID изображения</label>
-            <input type="number" formControlName="uploadImageId" class="form-control">
-            <small *ngIf="form.get('uploadImageId').touched && form.get('uploadImageId').invalid">
-                <h4 class="text-center text-danger">Введите ID изображения</h4>
-            </small>
+            <div class="text-center m-2">
+                <img [src]="imgURL" height="150" *ngIf="imgURL">
+            </div>
+            <input #file type="file" (change)="uploadFile(file.files)" class="form-control" id="customFile" />
         </div>
-
-
-
-
         <div class=" mt-2 d-flex justify-content-between ">
             <div> <button type="button" class="btn btn-warning" (click)="closeModal()">Отмена</button></div>
             <div> <button type="submit" class="btn btn-primary " [disabled]="form.invalid">Сохранить
                 </button></div>
         </div>
-
     </form>
 </div>

@@ -10,16 +10,11 @@ import { Order } from '../models/order.model';
   styleUrls: ['./cart.component.css']
 })
 export class CartComponent {
-
   delivery
   apiUrl: string = environment.ApiUrl;
-
-
-
   constructor(public cart: Cart, public order: Order, private router: Router,) {
     if (order.products.length == 0) {
       this.router.navigateByUrl("/pizza");
     }
   }
-
 }

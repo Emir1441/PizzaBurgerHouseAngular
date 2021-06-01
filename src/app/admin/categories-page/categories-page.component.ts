@@ -11,52 +11,16 @@ export class CategoriesPageComponent implements OnInit {
 
   categories = []
   searchCategory = ''
-
-
-
-
-
-
-
-
-
   constructor(public categoryService: CategoryService, private modalService: NgbModal) { }
-
-
-
   ngOnInit(): void {
-
-
-
-
     this.getAll()
-
-
   }
-
-
   addImageModal(content) {
     this.modalService.open(content, { centered: true });
   }
-
-
   getAll() {
     this.categoryService.getAllCategory().subscribe(res => {
       this.categories = res
     })
-
-
-
-
-
-
-
   }
 }
-
-
-
-
-
-
-

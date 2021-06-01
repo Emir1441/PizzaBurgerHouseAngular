@@ -12,12 +12,7 @@ import { CartComponent } from './cart/cart.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { JwtModule } from '@auth0/angular-jwt';
 import { HttpClientModule } from '@angular/common/http';
-
-
-
-
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PaymentComponent } from './cart/payment/payment.component';
 import { CheckoutPaymentComponent } from './cart/checkout-payment/checkout-payment.component';
@@ -30,26 +25,12 @@ import { ProductService } from './services/product.service';
 import { RepositoryService } from './services/repository.service';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
-import { ProductPageComponent } from './product-list/product-page/product-page.component';
-
-
-
-
-
-
 
 export function tokenGetter() {
   return localStorage.getItem('jwt')
 }
-
-
-
-
 @NgModule({
   declarations: [
-
-
-
     AppComponent,
     MainLayoutComponent,
     PizzaPageComponent,
@@ -60,17 +41,7 @@ export function tokenGetter() {
     CartComponent,
     PaymentComponent,
     CheckoutPaymentComponent,
-
     OrderConfirmationComponent,
-
-    ProductPageComponent,
-
-
-
-
-
-
-
   ],
   imports: [
     BrowserModule,
@@ -79,12 +50,8 @@ export function tokenGetter() {
     NgbModule,
     HttpClientModule,
     FormsModule,
-
     ReactiveFormsModule,
-
     BrowserAnimationsModule,
-
-
     JwtModule.forRoot({
       config: {
         tokenGetter: tokenGetter,
@@ -93,11 +60,7 @@ export function tokenGetter() {
 
       }
     }),
-
-
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
-
-
   ],
   providers: [Cart, Order, ProductService, RepositoryService],
   bootstrap: [AppComponent]

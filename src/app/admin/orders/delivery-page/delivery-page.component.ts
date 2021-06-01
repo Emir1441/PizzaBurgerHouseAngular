@@ -8,12 +8,8 @@ import { OrderService } from 'src/app/services/order.service';
   styleUrls: ['./delivery-page.component.css']
 })
 export class DeliveryPageComponent implements OnInit {
-
-
   deliveryOrders: any
   spinner = false
-
-
   constructor(private orderService: OrderService, private modalService: NgbModal) { }
 
   ngOnInit(): void {
@@ -23,12 +19,7 @@ export class DeliveryPageComponent implements OnInit {
     })
     this.spinner = false
   }
-
-
-
-
   deliveryViewModal(content) {
     this.modalService.open(content, { centered: true });
   }
-
 }

@@ -9,16 +9,12 @@ import { DrinkComponent } from "./product/drink/drink.component";
 import { CartComponent } from "./cart/cart.component";
 import { CheckoutPaymentComponent } from './cart/checkout-payment/checkout-payment.component';
 import { OrderConfirmationComponent } from './cart/order-confirmation/order-confirmation.component';
-import { ProductPageComponent } from './product-list/product-page/product-page.component';
-
-
 
 const routes: Routes = [
   { path: "checkout/step1", component: CheckoutPaymentComponent },
   { path: "checkout/confirmation", component: OrderConfirmationComponent },
   { path: 'cart', component: CartComponent },
   {
-
     path: '', component: MainLayoutComponent, children: [
       { path: '', redirectTo: 'pizza', pathMatch: 'full' },
       { path: 'pizza', component: PizzaPageComponent },
@@ -26,19 +22,11 @@ const routes: Routes = [
       { path: 'potato', component: PotatoComponent },
       { path: 'sauce', component: SauceComponent },
       { path: 'drink', component: DrinkComponent },
-      { path: 'product:categoryId', component: ProductPageComponent },
       { path: '**', redirectTo: 'pizza' }
-
-
-
     ],
-
   },
   { path: 'admin', loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule) }
 ];
-
-
-
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]

@@ -13,36 +13,18 @@ import { Order } from 'src/app/models/order.model';
 export class CheckoutPaymentComponent {
 
   delivery: any;
-
-
-
-
   constructor(public order: Order, private router: Router, public cart: Cart,
     private modalService: NgbModal) {
     if (order.products.length == 0) {
       this.router.navigateByUrl("/pizza");
     }
   }
-
-
-
-
-
-
   chooseCity = [
     { name: 'Минск' },
     { name: 'Орша' },
   ]
-
   submitOrderDelivery(content) {
     this.modalService.open(content, { centered: true });
     this.order.submitDelivery();
-
   }
-
-
-
-
-
-
 }

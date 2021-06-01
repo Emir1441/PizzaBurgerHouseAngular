@@ -11,13 +11,10 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./potato.component.css']
 })
 export class PotatoComponent {
-
   products: Product[];
   apiUrl: string = environment.ApiUrl;
   spinner = false
-
   constructor(private productService: ProductService, public cart: Cart, private categoryService: CategoryService) { }
-
   ngOnInit(): void {
     this.spinner = true
     this.categoryService.getProductByIdCategory(5).subscribe(res => {
@@ -28,5 +25,4 @@ export class PotatoComponent {
   addCart(product) {
     this.cart.addProduct(product)
   }
-
 }

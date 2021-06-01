@@ -10,7 +10,6 @@ import { Order } from 'src/app/models/order.model';
   styleUrls: ['./order-confirmation.component.css']
 })
 export class OrderConfirmationComponent {
-
   constructor(private router: Router, private modalService: NgbModal,
     public order: Order) {
     if (order.customerPhoneNumber == null || order.customerName == null,
@@ -19,16 +18,9 @@ export class OrderConfirmationComponent {
       router.navigateByUrl("/checkout/step1");
     }
   }
-
-
-
-
-
   closeModal() {
-    this.modalService.dismissAll();
-
+    if (this.order.orderConfirmation.orderId !== 0) {
+      this.modalService.dismissAll();
+    }
   }
-
-
-
 }

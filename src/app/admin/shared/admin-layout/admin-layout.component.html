@@ -1,25 +1,6 @@
 <header class="navbar navbar-primary sticky-top bg-light  flex-md-nowrap p-0 shadow">
     <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3  text-dark" href="#">Pizza Burger House</a>
-
-
-
-
-
-
-
-
-
-
-
-
     <input class="form-control form-control-dark col-md-3" type="text" placeholder="Поиск" aria-label="Search">
-
-
-
-
-
-
-
     <a>
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-person-circle"
             viewBox="0 0 16 16">
@@ -28,34 +9,23 @@
                 d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
         </svg>
         {{auth.userName}}
-
     </a>
-
-
-
     <ul class="navbar-nav px-3">
         <li class="nav-item text-nowrap">
-
             <a class="nav-link" (click)="logOut()">
 
                 <button class="btn btn-danger"><i class="fas fa-sign-out-alt"></i> Выход</button>
             </a>
-
         </li>
     </ul>
 </header>
-
 <div class="container-fluid">
     <div class="row">
         <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-white sidebar collapse show">
             <div class="position-sticky pt-3">
                 <ul class="nav flex-column ">
-
-
                     <li class="nav-item" routerLinkActive="active">
-
                         <a class="nav-link" [routerLink]="['/admin','delivery']">
-
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
                                 class="bi bi-cart3" viewBox="0 0 16 16">
                                 <path
@@ -64,9 +34,6 @@
                             Заказы
                         </a>
                     </li>
-
-
-
                     <li class="nav-item" routerLinkActive="active">
                         <a class="nav-link" [routerLink]="['/admin','category']">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
@@ -78,12 +45,9 @@
                             Категории и позиции
                         </a>
                     </li>
-
-
                 </ul>
             </div>
         </nav>
-
         <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
             <div class="chartjs-size-monitor">
                 <div class="chartjs-size-monitor-expand">
@@ -93,15 +57,7 @@
                     <div class=""></div>
                 </div>
             </div>
-
-
-
             <router-outlet></router-outlet>
-
-
-
-
-
         </main>
     </div>
 </div>

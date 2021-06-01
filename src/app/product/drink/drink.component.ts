@@ -11,14 +11,9 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./drink.component.css']
 })
 export class DrinkComponent implements OnInit {
-
-
-
-
   products: Product[];
   apiUrl: string = environment.ApiUrl;
   spinner = false
-
   constructor(private productService: ProductService, public cart: Cart, private categoryService: CategoryService) { }
 
   ngOnInit(): void {
@@ -28,12 +23,7 @@ export class DrinkComponent implements OnInit {
       this.spinner = false
     })
   }
-
-
-
   addCart(product) {
     this.cart.addProduct(product)
   }
-
-
 }

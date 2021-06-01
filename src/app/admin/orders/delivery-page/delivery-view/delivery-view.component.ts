@@ -10,31 +10,21 @@ import { OrderService } from 'src/app/services/order.service';
   styleUrls: ['./delivery-view.component.css']
 })
 export class DeliveryViewComponent implements OnInit {
-
-
   viewForm: FormGroup;
   cartLine: any;
   res: any
   spinner = false
-
   constructor(private orderService: OrderService, private route: ActivatedRoute, private router: Router) { }
-
   ngOnInit(): void {
     this.route.params.pipe(
       switchMap((params: Params) => {
         return this.orderService.getOrderId(params['orderId'])
-
       })
-
-
     ).subscribe((orderCartLine) => {
       console.log(this.cartLine = orderCartLine)
       this.res = this.cartLine.products
       this.spinner = true
-
     })
     this.spinner = false
   }
-
-
 }

@@ -1,32 +1,21 @@
 <form novalidate #checkoutForm="ngForm">
     <div class="page">
-
         <div class="bg-primary text-white p-2">
             <div class="navbar-brand font-weight-bold">Pizza Burger House</div>
         </div>
-
         <div class="bd-example">
-
             <div class="row g-4 row justify-content-center">
                 <div class="text-center">
                     <h1 class="font-weight-bold">Контактная информация</h1>
                 </div>
-
-
-
-
                 <div class="col-md-2">
                     <label class="form-label">Номер телефона*</label>
                     <input #phoneNumber="ngModel" type="tel" [(ngModel)]="order.customerPhoneNumber" name="phoneNumber"
                         class="form-control" required>
-
                     <div *ngIf="phoneNumber.invalid && phoneNumber.touched" class="text-danger">
                         Введите номер телефона
                     </div>
                 </div>
-
-
-
                 <div class="col-md-2">
                     <label class="form-label">Ваше имя*</label>
                     <input #name="ngModel" type="text" [(ngModel)]="order.customerName" name="name" class="form-control"
@@ -35,20 +24,13 @@
                         Введите имя
                     </div>
                 </div>
-
-
-
                 <div class="col-md-2">
                     <label class="form-label">E-mail</label>
                     <input type="mail" [(ngModel)]="order.customerEmail" name="cosmomerEmail" class="form-control">
-
                 </div>
             </div>
         </div>
-
         <hr>
-
-
         <div class="row g-3 row justify-content-center">
             <div class="col-md-2">
                 <label class="form-label">Ваш город</label>
@@ -61,11 +43,6 @@
                     Введите город
                 </div>
             </div>
-
-
-
-
-
             <div class="col-md-2">
                 <label class="form-label">Улица</label>
                 <input #street="ngModel" type="text" [(ngModel)]="order.deliveryOrder.customerStreet"
@@ -82,7 +59,6 @@
                     Введите номер дома
                 </div>
             </div>
-
             <div class="col-md-2">
                 <label class="form-label">Квартира</label>
                 <input #apartment="ngModel" type="number" [(ngModel)]="order.deliveryOrder.customerApartmentNumber"
@@ -99,11 +75,7 @@
                     Введите номер подьезд
                 </div>
             </div>
-
-
-
             <app-payment></app-payment>
-
             <div class="text-center ">
                 <div>
                     <h2>Сумма заказа: {{cart.totalPrice}} руб</h2>
@@ -111,14 +83,9 @@
                 <button class="btn btn-danger m-1" [disabled]="checkoutForm.invalid"
                     (click)="submitOrderDelivery(confirmContent)">Оформить заказ</button>
             </div>
-
         </div>
-
     </div>
 </form>
-
-
-
 <ng-template #confirmContent let-modal class="">
     <div class="modal-body">
         <app-order-confirmation></app-order-confirmation>

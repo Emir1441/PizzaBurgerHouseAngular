@@ -17,41 +17,26 @@ export class ProductFormComponent implements OnInit {
   @Input('categoryId') categoryId: number;
 
   constructor(private modalService: NgbModal, public productService: ProductService, public categoryService: CategoryService) { }
-
-
-
-
-
-
   ngOnInit() {
     this.categoryService.getProductByIdCategory(this.categoryId)
 
     this.getAll();
   }
-
-
-
   addProductModal(content) {
     this.modalService.open(content, { centered: true });
   }
-
   getAll() {
     this.categoryService.getProductByIdCategory(this.categoryId).subscribe(res => {
       this.products = res
       console.log("getPositionByIdCategory", this.products = res)
     })
   }
-
-
-
   deleteProduct(id: number) {
     this.productService.deleteProduct(id).subscribe(() => {
       this.products = this.products.filter(x => x.productId !== id)
     })
   }
-
   editModal(content) {
     this.modalService.open(content, { centered: true });
   }
-
 }

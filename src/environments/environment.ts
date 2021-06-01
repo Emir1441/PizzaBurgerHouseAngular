@@ -5,8 +5,9 @@
 export const environment = {
   production: false,
 
+  ApiUrl: "http://www.pizza-burger-house.somee.com"
   // ApiUrl: "http://pizza-burger-house.somee.com/"
-  ApiUrl: "https://localhost:44320"
+  // ApiUrl: "https://localhost:44320"
 };
 
 /*

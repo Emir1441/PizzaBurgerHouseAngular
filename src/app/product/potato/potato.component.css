@@ -1,48 +1,22 @@
-
-
-
 .container {
     text-align: center;
-    padding: 20px 0px;
-    
-    
+    padding: 20px 0px; 
   }
-  
   .product-block {
     display: inline-block;
     margin: 20px 15px;
     padding: 10px;
-    
-    
-    
-   
-    
   } 
-
 .product-block:hover {
     transform: scale(1.1) ;
     transition: transform 0.4s;
 }
-
-
-
 .product-img {
-   
     text-align: center; 
-   
 }
-
 .product-title {
     text-align: center;
-  
-   
-
 }
-
-
 .btn-cart {
     text-align: center;
-
 }
-
-

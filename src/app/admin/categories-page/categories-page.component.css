@@ -1,20 +1,14 @@
 .hoverList:hover{
     background-color: rgba(202, 194, 194, 0.5);
-    
 }
 .lineNone{
     text-decoration: none;
-  
 }
-
-
 .fig {
- 
     display: block; 
     text-align: center; 
     font-style: italic; 
     margin-top: 0; 
     margin-bottom: 5px;
     color: #666; 
-   
    }

@@ -1,8 +1,7 @@
 <div *ngIf="!spinner; else loader" class="container">
-
      <div *ngFor="let product of products" class="product-block">
           <div class="product-img">
-               <img [src]='apiUrl + product?.uploadImage.path' alt="Напитки-бонаква">
+               <img [src]='apiUrl + product?.path' alt="Напитки-бонаква">
           </div>
           <div class="product-title">
                <h4>{{product.productName}}</h4>
@@ -15,7 +14,6 @@
           </div>
      </div>
 </div>
-
 <ng-template #loader>
      <div>
           <p class="fig" class="fig"> <img src="./assets/image/preloader.gif" alt="">

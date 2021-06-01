@@ -11,18 +11,14 @@ export class Product {
 export class PaymentMethod {
     paymentType: string
 }
-
 export class DeliveryOrder {
     cartLineId: number;
     customerCity: string;
     customerStreet: string;
     customerHouseNumber: string;
     customerApartmentNumber: string;
-
     customerEntranceNumber: string;
-
 }
-
 export class CartLine {
     constructor(private productId: number, private productName: string,
         private price: number,
